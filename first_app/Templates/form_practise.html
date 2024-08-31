@@ -1,0 +1,30 @@
+{% extends 'home.html'%}
+{% block content%}
+<h3>This is Form Practise</h3>
+<div style="width: 50%;height: 500px;margin: auto;" class="pt-5">
+    <h3>Action Rating Form</h3>
+    <form method="post" action="/App/">
+     {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleInputname" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputname" aria-describedby="nameHelp" name="username">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+      </div>
+    
+      <select class="form-control mb-5 mt-5" name="select" >
+        <option selected>Ratings the Movies</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+  </div>
+{% endblock %}
